@@ -16,3 +16,13 @@ cargo run -- --version
 cargo run -- help hello
 cargo run -- -v hello World
 ```
+
+## Testing commands
+
+Run the CLI integration tests with:
+
+```sh
+cargo test
+```
+
+`tests/cli.rs` is an example to follow when adding commands. Each test runs the compiled CLI with arguments and checks its exit status and output. For a new command, add tests for its successful behavior, its `--help` output, and missing or invalid arguments where applicable.
